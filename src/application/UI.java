@@ -29,7 +29,10 @@ public class UI {// https://stackoverflow.com/questions/5762491/how-to-print-col
 	public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
 	public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 	
-	
+	public static void clearScream() {
+		System.out.println("\033[H\033[2J");
+		System.out.flush();
+	}
 	
 	public static ChessPosition readChessPosition(Scanner sc) {
 		try {
